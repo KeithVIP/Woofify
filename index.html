@@ -24,8 +24,12 @@
         <select class="breed_select">
           <option></option>
         </select>
-        <button class="btn btn-primary" type="button" id="searchButton">
-          <i class="fas fa-search">Search For Adoption Center</i>
+        <form>
+          <legend> Search For An Adoption Center </legend>
+          <label for="zip">Zip</label>
+          <input type="text" name="zip" id="zip">
+          <input type="submit" id="submitZip">
+      </form>
       </div>
 
       <div id="breed-card" class="w3-show-inline-block">
@@ -39,6 +43,8 @@
           <button class="btn-breeds">Dobermann</button>
         </div>
       </div>
+
+
 
       <div class="col-12 col-md-8 card-three">
         <div id="breed-container-fluid" class="list-group">
@@ -59,6 +65,9 @@
           <h3>Woofers Near You:</h3>
         </div>
       </div>
+
+      <iframe src="pets.html" width="200" height="400"> </iframe>
+
       <div class="row">
         <div class="col-md-2 adoption"></div>
         <div class="col-md-2 adoption"></div>
