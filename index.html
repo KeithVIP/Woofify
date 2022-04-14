@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap%22rel=%22stylesheet%22/%3E" rel="stylesheet"/>
+
+  <title>Woofify</title>
+</head>
+
+<body class="flex-column">
+  <header class="hero is-half">
+    <img src="./images/thumb-1920-354422.jpeg" alt="cute dogs">
+  </header>
+
+  <main class="flex-row justify-space-between">
+    <div id="container-search" class="card">
+      <h1 class="card-header">Search for a Breed</h1>
+      <div class="enter-breed" type="text" class="" placeholder="Enter dog breed" aria-label="Enter Dog Breed">
+        <!--input id="breed_search" type="text" class="breed_search" placeholder="Enter dog breed"
+          aria-label="Enter Dog Breed" /-->
+        <select id="dogBreed" class="breed_select">
+          <option></option>
+        </select>
+        <form>
+          <legend> Search For An Adoption Center </legend>
+          <label for="zip">Zip Code</label>
+          <input type="text" name="zip" id="zip">
+          <input type="submit" class="button is-info" id="submitZip">
+      </form>
+      </div>
+
+
+
+      <div class="col-12 col-md-8 card-three">
+        <div id="breed-container-fluid" class="list-group">
+          <div id="breed_data">
+            <img class="column is-mobile is-pulled-left is-vcentered" id="breed_image" src="" />
+          </div>
+          <P>
+          </P>
+          <table id="breed_data_table" class="column">
+        </div>
+        <p>
+        </p>
+        </table>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="is-pulled-left" id="adoption-header">
+        <div class="is-inline-flex">
+          <h3>Woofers Near You:</h3>
+        </div>
+      </div>
+
+      <div id="adoption-list" class="row">
+        <div class="col-md-2 adoption"></div>
+        <div class="col-md-2 adoption"></div>
+        <div class="col-md-2 adoption"></div>
+        <div class="col-md-2 adoption"></div>
+        <div class="col-md-2 adoption"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/available.js"></script>
+  <script src="./assets/breeds.js"></script>
+</body>
+
+</html>
