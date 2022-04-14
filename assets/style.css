@@ -8,6 +8,8 @@
   
   * {
     box-sizing: border-box;
+    font-family:'Bebas Neue', cursive;
+    font-size: 1.3rem;
   }
   
   body {
@@ -35,12 +37,6 @@ main {
     margin: 20px auto;
     width: 94%;
   }
-
-.hero {
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-  color: var(--primary);
-}
 
 .app-title {
   text-align: center;
@@ -73,7 +69,6 @@ border: none;
   font-size: 12px;
   text-align: left;
   transition: all 0.2s;
-  margin: 0 auto;
   width: 500px;
 }
 
