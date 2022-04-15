@@ -45,15 +45,15 @@ function populateBreedsSelect(breeds) {
 }
 
 function getDogByBreed(breed_id) {
-
+  
   ajax_get('https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id=' + breed_id, function(data) {
 
     if (data.length == 0) {
-    
+      
       clearBreed();
       $("#breed_data_table").append("<tr><td>Sorry, no Image for that breed yet</td></tr>");
     } else {
-   
+      
       displayBreed(data[0])
     }
   });
@@ -71,9 +71,9 @@ function displayBreed(image) {
   
   var breed_data = image.breeds[0]
   $.each(breed_data, function(key, value) {
- 
+    
     if (key == 'weight' || key == 'height') value = value.metric
- 
+    
     $("#breed_data_table").append("<tr><td>" + key + "</td><td>" + value + "</td></tr>");
   });
 }

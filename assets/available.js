@@ -1,4 +1,4 @@
-const apiKey = "2Qiy6zxPX4cqcreCD0PTgJywBchv2BDtG42IM7RwTW1PHG8g4w"; 
+const apiKey = "2Qiy6zxPX4cqcreCD0PTgJywBchv2BDtG42IM7RwTW1PHG8g4w"; // assign our key to a variable, easier to read
 const secret = "1yoCQGBhzKKchC2iWYeTfyRw32LiQexcCsahyGY1";
 const tokenApi = "https://api.petfinder.com/v2/oauth2/token";
 
@@ -60,13 +60,12 @@ function bindButtons(){
 				for(var i = 0; i < dogs.length; i++) {
 					let dog = dogs[i];
 					let dogName = dog.name;
-                    let dogStatus = dog.status;
 					let dogAge = dog.age;
 					let dogGender = dog.gender;
 					let dogUrl = dog.url;
 					var dogPhoto = "./assets/images/no-photo.png";
 					if(dog.photos && dog.photos.length > 0) {
-						dogPhoto = dog.photos[0].small;
+						dogPhoto = dog.photos[0].medium;
 					}
 					var contactPhone = "No phone available";
 					var contactAddress = "No address available";
@@ -84,37 +83,36 @@ function bindButtons(){
 						}
 					}
 					// build the card
+
 					let adoptionCard = document.createElement("div");  // <div id="dog-5532424" class="col-md-2 adoption"> </div>
 					adoptionCard.setAttribute("id", "dog-" + dog.id);
-					adoptionCard.setAttribute("class", "col-md-2 adoption");
+					adoptionCard.setAttribute("class", "adoption-card-id");
 					
-					let adoptionCardName = document.createElement("p");   // <p class="adoption-name">Bobby</p>
-					adoptionCardName.setAttribute("class", "adoption-card-name");
-					adoptionCardName.textContent = dogName;
 
-					let adoptionCardAge = document.createElement("p");   // <p class="adoption-age">Young</p>
-					adoptionCardAge.setAttribute("class", "adoption-card-age");
-					adoptionCardAge.textContent = dogAge;
-
-                    let adoptionCardGender = document.createElement("p");   // <p class="adoption-status">Bobby</p>
-					adoptionCardName.setAttribute("class", "adoption-card-gender");
-					adoptionCardName.textContent = dogGender;
-
-                    let adoptionCardStatus = document.createElement("p");   // <p class="adoption-status">Bobby</p>
-					adoptionCardName.setAttribute("class", "adoption-card-status");
-					adoptionCardName.textContent = dogStatus;
-
-					let adoptionCardImage = document.createElement("img");  // <img src="..." alt="Bobby's picture" class="adoption-card-photo"></img>
+                    let adoptionCardImage = document.createElement("img");  // <img src="..." alt="Bobby's picture" class="adoption-card-photo"></img>
 					adoptionCardImage.setAttribute("class", "adoption-card-photo");
 					adoptionCardImage.setAttribute("src", dogPhoto);
 					adoptionCardImage.setAttribute("alt", dog.name + "'s picture");
 
+					let adoptionCardName = document.createElement("div");   // <p class="adoption-name">Bobby</p>
+					adoptionCardName.setAttribute("class", "adoption-card-name");
+					adoptionCardName.textContent = dogName;
+
+					let adoptionCardAge = document.createElement("div");   // <p class="adoption-age">Young</p>
+					adoptionCardAge.setAttribute("class", "adoption-card-age");
+					adoptionCardAge.textContent = dogAge;
+
+
+					let adoptionCardUrl = document.createElement("a");   // <p class="adoption-age">Young</p>
+					adoptionCardUrl.setAttribute("href", dogUrl);
+                    adoptionCardUrl.textContent = dogUrl;
+                    
+				    
+
 					adoptionCard.appendChild(adoptionCardName); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p></div>
 					adoptionCard.appendChild(adoptionCardAge); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p><p class="adoption-age">Young</p></div>
-                    adoptionCard.appendChild(adoptionCardStatus);
-                    adoptionCard.appendChild(adoptionCardGender;
 					adoptionCard.appendChild(adoptionCardImage); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p><p class="adoption-age">Young</p><img src="..." alt="Bobby's picture" class="adoption-card-photo"></img></div>
-
+                    adoptionCard.appendChild(adoptionCardUrl);
 
 					// append the card to the container
 					adoptionListElem.appendChild(adoptionCard);
@@ -125,5 +123,3 @@ function bindButtons(){
     });
 
 }
-
-document.addEventListener('DOMContentLoaded', bindButtons);
