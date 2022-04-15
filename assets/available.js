@@ -105,7 +105,7 @@ function bindButtons(){
 
 					let adoptionCardUrl = document.createElement("a");   // <p class="adoption-age">Young</p>
 					adoptionCardUrl.setAttribute("href", dogUrl);
-                    adoptionCardUrl.textContent = dogUrl;
+                    adoptionCardUrl.textContent = dogName + "'s personal page";
                     
 				    
 
