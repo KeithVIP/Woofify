@@ -12,6 +12,7 @@ Well, now you can with Woofify!
 *HTML 
 *CSS 
 *JQuery 
+*The Dog Api
 *PetFinder API
 *Bulma
 
