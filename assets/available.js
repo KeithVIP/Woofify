@@ -45,6 +45,10 @@ function findDogsByZipCode(breed, zipCode, callbackSuccess) {
 //;
 
 function bindButtons(){
+	document.getElementById('dogBreed').addEventListener('change', function(event) {
+		let adoptionListElem = document.getElementById("adoption-list");
+		adoptionListElem.innerHTML = "";
+	});
     document.getElementById('submitZip').addEventListener('click', function(event){
         event.preventDefault();
         var zip = document.getElementById('zip').value; // this line gets the zip code from the form entry
