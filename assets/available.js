@@ -86,7 +86,7 @@ function bindButtons(){
 
 					let adoptionCard = document.createElement("div");  // <div id="dog-5532424" class="col-md-2 adoption"> </div>
 					adoptionCard.setAttribute("id", "dog-" + dog.id);
-					adoptionCard.setAttribute("class", "adoption-card-id");
+					adoptionCard.setAttribute("class", "column is-one-fifth is-1");
 					
 
                     let adoptionCardImage = document.createElement("img");  // <img src="..." alt="Bobby's picture" class="adoption-card-photo"></img>

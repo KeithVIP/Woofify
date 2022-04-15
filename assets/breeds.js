@@ -18,13 +18,11 @@ function searchBreeds(search_str) {
   }
 }
 
-
 var $breed_select = $('select.breed_select');
 $breed_select.change(function() {
   var id = $(this).children(":selected").attr("id");
   getDogByBreed(id)
 });
-
 
 
 function getBreeds() {
@@ -33,7 +31,6 @@ function getBreeds() {
     breeds = data
   });
 }
-
 function populateBreedsSelect(breeds) {
   $breed_select.empty().append(function() {
     var output = '';
@@ -58,12 +55,10 @@ function getDogByBreed(breed_id) {
     }
   });
 }
-
 function clearBreed() {
   $('#breed_image').attr('src', "");
   $("#breed_data_table tr").remove();
 }
-
 function displayBreed(image) {
   $('#breed_image').attr('src', image.url);
   $("#breed_data_table tr").remove();
@@ -77,7 +72,6 @@ function displayBreed(image) {
     $("#breed_data_table").append("<tr><td>" + key + "</td><td>" + value + "</td></tr>");
   });
 }
-
 
 function ajax_get(url, callback) {
   var xmlhttp = new XMLHttpRequest();
@@ -97,5 +91,4 @@ function ajax_get(url, callback) {
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 }
-
 getBreeds();
