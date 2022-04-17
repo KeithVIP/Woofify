@@ -31,25 +31,20 @@
           <label for="zip">Zip Code</label>
           <input type="text" name="zip" id="zip">
           <input type="submit" class="button is-info" id="submitZip">
-      </form>
+        </form>
       </div>
 
 
 
-      <div class="col-12 col-md-8 card-three">
-        <div id="breed-container-fluid" class="list-group">
-          <div id="breed_data">
-            <img class="column is-mobile is-pulled-left is-vcentered" id="breed_image" src="" />
-          </div>
-          <P>
-          </P>
-          <table id="breed_data_table" class="column">
+      <div class="columns is-mobile is-marginless is-paddingless">
+        <div id="breed_data" class="column is-mobile is-vcentered" >
+          <img id="breed_image" src="" />
         </div>
-        <p>
-        </p>
-        </table>
+        <div class="column is-mobile is-centered is-vcentered">
+          <table id="breed_data_table" class="column"></table>
+        </div>
       </div>
-      </div>
+    </div>
 
       <br>
       <br>
@@ -57,12 +52,12 @@
   
       <!--div id="container-search" class="card">
       <h1 class="card-header">Woofers Near You:</h1-->
-      <div class="is-pulled-left" id="adoption-header">
-        <div class="is-inline-flex">
+      <div class="is-clearfix column" id="adoption-header">
+        <div class="is-block">
           <h3>Woofers Near You:</h3>
         </div>
       </div>
-      <div id="adoption-list" class="column">
+      <div id="adoption-list" class="columns is-multiline">
       </div>
     </div>
 

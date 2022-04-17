@@ -106,6 +106,9 @@ function bindButtons(){
 					adoptionCardAge.setAttribute("class", "adoption-card-age");
 					adoptionCardAge.textContent = dogAge;
 
+					let adoptionCardGender = document.createElement("div");   // <p class="adoption-gender">Male</p>
+					adoptionCardGender.setAttribute("class", "adoption-card-gender");
+					adoptionCardGender.textContent = dogGender;
 
 					let adoptionCardUrl = document.createElement("a");   // <p class="adoption-age">Young</p>
 					adoptionCardUrl.setAttribute("href", dogUrl);
@@ -115,6 +118,7 @@ function bindButtons(){
 
 					adoptionCard.appendChild(adoptionCardName); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p></div>
 					adoptionCard.appendChild(adoptionCardAge); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p><p class="adoption-age">Young</p></div>
+					adoptionCard.appendChild(adoptionCardGender);
 					adoptionCard.appendChild(adoptionCardImage); // <div id="dog-5532424" class="col-md-2 adoption"><p class="adoption-name">Bobby</p><p class="adoption-age">Young</p><img src="..." alt="Bobby's picture" class="adoption-card-photo"></img></div>
                     adoptionCard.appendChild(adoptionCardUrl);
 

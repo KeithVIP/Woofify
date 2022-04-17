@@ -64,13 +64,24 @@ function displayBreed(image) {
   $("#breed_data_table tr").remove();
 
   
-  var breed_data = image.breeds[0]
-  $.each(breed_data, function(key, value) {
-    
-    if (key == 'weight' || key == 'height') value = value.metric
-    
-    $("#breed_data_table").append("<tr><td>" + key + "</td><td>" + value + "</td></tr>");
-  });
+  var breed_data = image.breeds[0];
+
+  if(breed_data) {
+    let breedHeight = breed_data.height.metric + " cm";
+    let breedWeight = breed_data.weight.metric + " kg";
+    let breedTemperament = breed_data.temperament;
+    let breedName = breed_data.name;
+    let breedLifeSpan = breed_data.life_span;
+    let breedOrigin = breed_data.origin;
+    $("#breed_data_table").append("<tr><td>Name: </td><td>" + breedName + "</td></tr>");
+    $("#breed_data_table").append("<tr><td>Height: </td><td>" + breedHeight + "</td></tr>");
+    $("#breed_data_table").append("<tr><td>Weight: </td><td>" + breedWeight + "</td></tr>");
+    $("#breed_data_table").append("<tr><td>Temperament: </td><td>" + breedTemperament + "</td></tr>");
+    $("#breed_data_table").append("<tr><td>Life Span: </td><td>" + breedLifeSpan + "</td></tr>");
+    $("#breed_data_table").append("<tr><td>Origin: </td><td>" + breedOrigin + "</td></tr>");
+  } else {
+    $("#breed_data_table").append("<tr><td>Sorry, no data for that breed yet</td></tr>");
+  }
 }
 
 function ajax_get(url, callback) {

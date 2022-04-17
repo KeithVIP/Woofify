@@ -77,3 +77,5 @@ border: none;
   margin: 0 auto;
   width: 460px;
 }
+
+.adoption-list:hover {background-color: coral;}
